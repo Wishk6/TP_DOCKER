@@ -1,3 +1,11 @@
+2
+```shell
+docker run hello-world
+docker run -it ubuntu bash
+docker images
+docker ps -a
+docker run -p 80:80 nginx et docker run -p -d 80:80 nginx
+```
 
 5.a
 ```shell
@@ -19,11 +27,38 @@ docker.io/library/nginx:latest
 wishk@wishk-virtual-machine:~$ sudo docker image ls
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 nginx         latest    ac8efec875ce   11 hours ago    142MB
-hello-world   latest    feb5d9fea6a5   14 months ago   13.3kB
+hello-world   latest    feb5d9fea6a5   14 hours ago   13.3kB
 ```
 5.c
 ```shell
 wishk@wishk-virtual-machine:~/Documents$ echo > index.html
 wishk@wishk-virtual-machine:~/Documents$ ls
 index.html
+```
+Après avoir crée un fichier index.html dans le dossier siteWeb, je lance la commande suivante:
+```shell
+5.d
+```shell
+wishk@wishk-virtual-machine:~$ sudo docker run -it --rm -d -p 8080:80 --name testPageNginx -v ~/siteWeb:/usr/share/nginx/html nginx
+
+aa0d351efde863cb469a99293ef444bde5400a4c0581aa71d79d14a21de18795
+```
+Cette commande nous permet de monter notre repository dans le container nginx.
+<br>
+Nous avons donc accès à notre fichier index.html depuis le container nginx. 
+![img_1.png](img_1.png)
+
+6.a
+```shell
+
+```
+
+6.b
+```shell
+
+```
+
+6.c
+```shell
+
 ```
