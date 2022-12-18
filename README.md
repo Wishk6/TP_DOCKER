@@ -1,6 +1,3 @@
-## TP1 Docker DevOps | Guillaume Saurin / Alexandre Ortuno
-#### Les commandes sont en shell 
-#### Le texte représente le retour des commandes 
 2
 ```shell
 docker run hello-world
@@ -9,7 +6,7 @@ docker images
 docker ps -a
 docker run -p 80:80 nginx et docker run -p -d 80:80 nginx
 ```
-// ICI mettre les screens retours de toutes les commandes 
+
 5.a
 ```shell
 docker pull nginx
