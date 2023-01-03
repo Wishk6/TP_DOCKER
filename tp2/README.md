@@ -67,12 +67,17 @@ Successfully tagged ma_super_app:latest
 ````
 4.
 
-[docke-compose.yml](docke-compose.yml)
+[docker-compose.yml](docker-compose.yml)
 ````text
 Après avoir réécrit le docker-compose.yml, on peut lancer la commande suivante en spécifiant les variables d'environnement :
 ````
 
 ````shell
 docker-compose up -d -e DATABASE_PORT=3306 -e DATABASE_NAME=mydatabase -e DATABASE_USERNAME=myuser -e DATABASE_PASSWORD=mypassword  ....
+````
+
+`````text
+on peut aussi les integrer directement dans le fichier docker-compose ou les déclarer dans un fichier .env.
+Pour visualiser la base, nous pouvons utiliser differents outils comme phpmyadmin ou mysql workbench
 ````
 
