@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: wishk
+      MYSQL_PASSWORD: passWord31!
+  apache:
+    image: httpd:2.4
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/usr/local/apache2/htdocs/
+    links:
+      - mysql
+    volumes:
+      - ./database:/var/lib/mysql
+  php:
+    image: php:7.4-fpm
+    links:
+      - mysql
+    volumes:
+      - ./www:/var/www/html
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "8080:80"
+    links:
+      - mysql
