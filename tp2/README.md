@@ -76,7 +76,7 @@ Après avoir réécrit le docker-compose.yml, on peut lancer la commande suivant
 docker-compose up -d -e DATABASE_PORT=3306 -e DATABASE_NAME=mydatabase -e DATABASE_USERNAME=myuser -e DATABASE_PASSWORD=mypassword  ....
 ````
 
-`````text
+````text
 on peut aussi les integrer directement dans le fichier docker-compose ou les déclarer dans un fichier .env.
 Pour visualiser la base, nous pouvons utiliser differents outils comme phpmyadmin ou mysql workbench
 ````
